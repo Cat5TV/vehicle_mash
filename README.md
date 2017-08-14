@@ -1,6 +1,9 @@
 ***Vehicles_mash***
-- version: 2.0
+- version: 2.1
 - by blert2112
+
+Why TPS 2.1 version:
+Players will grief with cars everywhere. This version will automatically convert cars to items if not used after 10 seconds, and then the items will inevitably disappear if player does not pick them up. Thanks to TenPlus1 for this fix and Brackston for the idea.
 
 A merge of all the vehicles from:
 - "Cars" by Radoslaw Slowik
