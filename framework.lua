@@ -114,6 +114,16 @@ function vehicle_mash.register_vehicle(name, def)
 			end
 		end,
 		on_step = function(self, dtime)
+			-- drop vehicle as item if no driver within 10 seconds
+			self.count = (self.count or 0) + dtime
+			if self.count > 10 then
+				minetest.add_item(self.object:getpos(), name)
+				self.object:remove()
+				return
+			end
+			if self.driver then
+				self.count = 0
+			end
 			drive(self, dtime, false, nil, nil, 0, false)
 		end
 	})
